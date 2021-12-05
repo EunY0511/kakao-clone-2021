@@ -27,12 +27,89 @@
       <h1 class="screen-header__title">More</h1>
       <div class="screen-header__icons">
         <span><i class="fas fa-search fa-lg"></i></span>
+        <span><i class="fas fa-music fa-lg"></i></span>
         <span><i class="fas fa-cog fa-lg"></i></span>
-        <div class="screen-header__badge"></div>
+        <div class="mini-badge"></div>
       </div>
     </header>
 
-    <main class="main-screen"></main>
+    <main class="main-screen more-screen">
+      <div class="user-component">
+        <div class="user-component__column">
+          <img
+            src="screenshots/멍뭉뽀송.jpg"
+            class="user-component__avatar user-component__avatar--xl"
+          />
+          <div class="user-component__text">
+            <h4 class="user-component__title">EunY</h4>
+            <div class="user-component__info">
+              <h6 class="user-component__phonenumber">+1 78-493-4219</h6>
+              <i class="fas fa-info-circle"></i>
+            </div>
+          </div>
+        </div>
+        <div class="user-component__column">
+          <i class="far fa-comment-alt fa-2x"></i>
+        </div>
+      </div>
+      <div class="icon-row">
+        <div class="icon-row__icon">
+          <i class="far fa-calendar-check"></i><span>Calendar</span>
+        </div>
+        <div class="icon-row__icon">
+          <i class="far fa-address-book"></i><span>Talk Drive</span>
+          <div class="mini-badge"></div>
+        </div>
+        <div class="icon-row__icon">
+          <i class="far fa-grin-stars"></i><span>Emoticons</span>
+        </div>
+        <div class="icon-row__icon">
+          <i class="fas fa-brush"></i><span>Themes</span>
+        </div>
+      </div>
+      <div class="icon-row">
+        <div class="icon-row__icon">
+          <i class="fas fa-file-invoice-dollar"></i><span>Account</span>
+        </div>
+        <div class="icon-row__icon">
+          <i class="far fa-comments"></i><span>Openchat</span>
+        </div>
+        <div class="icon-row__icon none"></div>
+        <div class="icon-row__icon none"></div>
+      </div>
+      <div class="more-suggestions">
+        <h4 class="more-suggestions__title">Suggestions</h4>
+        <div class="more-suggestions__icons">
+          <div class="more-suggestions__icon">
+            <div class="more-suggestions__icon-image">
+              <img
+                src="https://i.ytimg.com/vi/5z_Qw5IsJok/maxresdefault.jpg"
+                alt=""
+              />
+            </div>
+            <span class="more-suggestions__icon-text">Kakao Story</span>
+          </div>
+          <div class="more-suggestions__icon">
+            <div class="more-suggestions__icon-image">
+              <img
+                src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/service/a85d0594017900001.jpg"
+                alt=""
+              />
+            </div>
+            <span class="more-suggestions__icon-text">Kakao friends</span>
+          </div>
+          <div class="more-suggestions__icon">
+            <div class="more-suggestions__icon-image">
+              <img
+                src="https://i.ytimg.com/vi/D4mnwUKijy0/maxresdefault.jpg"
+                alt=""
+              />
+            </div>
+            <span class="more-suggestions__icon-text">friends Gem</span>
+          </div>
+        </div>
+      </div>
+    </main>
 
     <nav class="nav">
       <ul class="nav__list">
@@ -56,6 +133,7 @@
           <a class="nav__link" href="more.html"
             ><i class="fas fa-ellipsis-h fa-2x"></i
           ></a>
+          <div class="nav-badge"></div>
         </li>
       </ul>
     </nav>

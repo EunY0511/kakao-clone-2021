@@ -64,3 +64,19 @@
   display: block;
   margin-bottom: 5px;
 }
+
+.user-component__info {
+  display: flex;
+  align-items: baseline;
+}
+
+.user-component__phonenumber {
+  margin-top: 10px;
+  padding-right: 10px;
+  font-weight: 600;
+  opacity: 0.6;
+}
+
+.user-component__info i {
+  color: var(--teal);
+}

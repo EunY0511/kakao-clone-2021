@@ -9,3 +9,29 @@
   color: white;
   font-weight: 600;
 }
+
+.mini-badge {
+  background-color: var(--teal);
+  width: 5px;
+  height: 5px;
+  border-radius: 2.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -5px;
+  right: 5px;
+}
+
+.nav-badge {
+  background-color: var(--teal);
+  width: 5px;
+  height: 5px;
+  border-radius: 2.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -5px;
+  right: -7px;
+}
