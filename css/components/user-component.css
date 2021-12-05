@@ -1,0 +1,66 @@
+.user-component {
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.user-component,
+.user-component__column:first-child {
+  display: flex;
+  align-items: center;
+}
+
+.user-component__avatar {
+  width: 70px;
+  height: 70px;
+  /* 사진비율 그대로 유지하기 */
+  object-fit: cover;
+  margin-right: 15px;
+  border-radius: 30px;
+}
+
+.user-component__title {
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.user-component__subtitle {
+  margin-top: 7px;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.user-component__avatar--xl {
+  width: 80px;
+  height: 80px;
+  border-radius: 32px;
+}
+
+.user-component__avatar--sm {
+  width: 60px;
+  height: 60px;
+  border-radius: 25px;
+}
+
+.user-component__title--not-bold {
+  font-weight: 550;
+}
+
+.user-component__column:last-child {
+  color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.fa-chevron-up {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.fa-chevron-right {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.user-component__time {
+  display: block;
+  margin-bottom: 5px;
+}
