@@ -1,6 +1,6 @@
 #chatting-screen {
   background-color: var(--teal);
-  height: 1000vh;
+  height: 500vh;
   color: rgb(0, 0, 0);
 }
 
@@ -17,6 +17,21 @@
   z-index: 1;
 }
 
+/* @keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: none;
+  }
+  1% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+} */
+
 .main-chatting {
   margin-top: 70px;
   /* status-bar와 alt-header를 고정함으로써 main-chatting과는 다른 layer가 됨.
@@ -28,6 +43,7 @@
   align-items: center;
   /* justify-content로 center 줘도 똑같을 수 있으나 아래부터 채팅이 column방향이기 때문에 
   flex-direction으로 방향을 바꿔줌. */
+  /* animation: fadeIn 0.7s linear; */
 }
 
 .chatting__timestamp {
@@ -43,6 +59,25 @@
   width: 100%;
   display: flex;
   margin-bottom: 25px;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: none;
+  }
+  1% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.message-row__left {
+  animation: fadeInLeft 0.8s ease-in-out;
 }
 
 .message-row img {
@@ -83,8 +118,24 @@
   font-size: 13px;
 }
 
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: none;
+  }
+  1% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 .message-row--own {
   justify-content: flex-end;
+  animation: fadeInRight 2s ease-in-out;
 }
 
 .message-row--own .message__bubble {
@@ -110,6 +161,7 @@
   padding: 5px 25px;
   box-sizing: border-box;
   align-items: center;
+  transition: all 0.3s ease-in-out;
 }
 
 /* input에 width를 주기 위해 부모의 column 형식으로 된 부모에 먼저 width를 줌. */
@@ -128,6 +180,7 @@
   width: 100%;
   border: var(--main-border);
   border-radius: 20px;
+  transition: all 0.3s ease-in-out;
 }
 
 .writing__column:last-child > i,
@@ -144,7 +197,7 @@
 }
 
 .writing__column button {
-  background-color: var(--teal);
+  background-color: rgb(238, 208, 127);
   border: none;
   width: 30px;
   height: 30px;
@@ -154,4 +207,22 @@
 .writing__column button:focus,
 .writing__column button:active {
   outline: none;
+}
+
+/* form 안에 어떤 요소가 포커스 되어있다면 */
+.writing:focus-within .writing__column:first-child {
+  opacity: 0;
+}
+
+/* .writing:focus-within .writing__column:last-child {
+  transform: translateY(-80px);
+} */
+
+.writing:focus-within input {
+  width: 90vw;
+  transform: translateX(-13%) translateY(-80px);
+}
+
+.writing:focus-within {
+  transform: translateY(80px);
 }

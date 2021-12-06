@@ -100,3 +100,24 @@
 .open-post__heart-count span {
   margin-left: 3px;
 }
+
+@keyframes heartBeat {
+  0% {
+    color: white;
+    transform: none;
+  }
+  50% {
+    color: rgb(224, 33, 65);
+    transform: scale(2.5);
+  }
+  100% {
+    color: white;
+    transform: none;
+  }
+}
+
+.open-post__heart-count:hover i {
+  will-change: transform;
+  /* 그래픽카드를 이용한 애니메이션 가속화. 어떤게 변할것인지 브라우저에게 예고해줌 */
+  animation: heartBeat 1s linear infinite;
+}
