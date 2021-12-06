@@ -1,0 +1,157 @@
+#chatting-screen {
+  background-color: var(--teal);
+  height: 1000vh;
+  color: rgb(0, 0, 0);
+}
+
+#chatting-screen .status-bar {
+  position: sticky;
+  top: 0em;
+  z-index: 2;
+}
+
+#chatting-screen .alt-header {
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.main-chatting {
+  margin-top: 70px;
+  /* status-bar와 alt-header를 고정함으로써 main-chatting과는 다른 layer가 됨.
+때문에 채팅 창에 top에 마진을 둠.*/
+  display: flex;
+  /* timestamp는 div 박스형이기 때문에 백그라운그컬러가 한 줄을 잡아먹는데, 
+  넓이를 지정해주지 않았기 때문에 display: flex로 글씨크기만큼만 컬러가 나오게 할 수 있음.*/
+  flex-direction: column;
+  align-items: center;
+  /* justify-content로 center 줘도 똑같을 수 있으나 아래부터 채팅이 column방향이기 때문에 
+  flex-direction으로 방향을 바꿔줌. */
+}
+
+.chatting__timestamp {
+  color: white;
+  background-color: #d66860;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.message-row {
+  width: 100%;
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.message-row img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 40%;
+  margin-right: 10px;
+}
+
+.message__author {
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0.8;
+  display: block;
+  /* margin 주기 위해 block으로 바꿈 */
+  margin-bottom: 7px;
+}
+
+/* 말풍선 이미지 대신 */
+.message__bubble {
+  background-color: white;
+  padding: 8px 15px;
+  border-radius: 15px;
+  border-top-left-radius: 0px;
+  /* 개쩐당 ... */
+  margin-right: 7px;
+  font-size: 18px;
+  font-weight: 550;
+}
+
+.message__info {
+  display: flex;
+  align-items: flex-end;
+}
+
+.message__time {
+  font-size: 13px;
+}
+
+.message-row--own {
+  justify-content: flex-end;
+}
+
+.message-row--own .message__bubble {
+  background-color: rgb(201, 173, 96);
+  border-top-right-radius: 0px;
+  border-top-left-radius: 15px;
+  margin-right: 0px;
+  margin-left: 7px;
+}
+
+/* 내가 보낸 말풍선과 시간의 위치를 바꾸기 위해 사용 */
+.message-row--own .message__info {
+  flex-direction: row-reverse;
+}
+
+.writing {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 25px;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+/* input에 width를 주기 위해 부모의 column 형식으로 된 부모에 먼저 width를 줌. */
+.writing .writing__column:first-child {
+  width: 10%;
+}
+
+.writing .writing__column:last-child {
+  width: 90%;
+  position: relative;
+}
+
+.writing input {
+  padding-left: 10px;
+  height: 30px;
+  width: 100%;
+  border: var(--main-border);
+  border-radius: 20px;
+}
+
+.writing__column:last-child > i,
+.writing__column:last-child button {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  right: -10px;
+}
+
+.writing__column:last-child > i {
+  right: 30px;
+  top: 8px;
+}
+
+.writing__column button {
+  background-color: var(--teal);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.writing__column button:focus,
+.writing__column button:active {
+  outline: none;
+}
