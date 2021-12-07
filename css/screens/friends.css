@@ -17,12 +17,14 @@
   padding: 0px var(--horizontal-space);
 }
 
+.friends-component,
 .friends-screen__channel {
   margin-top: 25px;
   border-top: var(--main-border);
   padding-top: 15px;
 }
 
+.friends-screen__component-header,
 .friends-screen__channel-header {
   margin-bottom: 28px;
   display: flex;
@@ -55,4 +57,15 @@
   animation: hideSplashScreen 0.4s ease-in-out forwards;
   /* forwards는 애니메이션이 끝난 상태를 유지하고 싶을 때 */
   animation-delay: 0.7s;
+}
+
+.status__message {
+  display: flex;
+  align-items: center;
+  padding: 8px 8px;
+  background-color: var(--teal);
+  color: white;
+  border-radius: 15px;
+  font-size: 18px;
+  font-weight: 550;
 }

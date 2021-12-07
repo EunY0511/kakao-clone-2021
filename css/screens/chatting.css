@@ -119,7 +119,7 @@
 
 .message-row--own {
   justify-content: flex-end;
-  animation: fadeInRight 2s ease-in-out;
+  animation: fadeInRight 0.8s ease-in-out;
 }
 
 .message-row--own .message__bubble {
