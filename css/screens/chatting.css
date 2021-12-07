@@ -17,21 +17,6 @@
   z-index: 1;
 }
 
-/* @keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: none;
-  }
-  1% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: none;
-  }
-} */
-
 .main-chatting {
   margin-top: 70px;
   /* status-bar와 alt-header를 고정함으로써 main-chatting과는 다른 layer가 됨.
@@ -43,7 +28,6 @@
   align-items: center;
   /* justify-content로 center 줘도 똑같을 수 있으나 아래부터 채팅이 column방향이기 때문에 
   flex-direction으로 방향을 바꿔줌. */
-  /* animation: fadeIn 0.7s linear; */
 }
 
 .chatting__timestamp {
@@ -214,11 +198,7 @@
   opacity: 0;
 }
 
-/* .writing:focus-within .writing__column:last-child {
-  transform: translateY(-80px);
-} */
-
-.writing:focus-within input {
+.writing input:focus {
   width: 90vw;
   transform: translateX(-13%) translateY(-80px);
 }
